@@ -23,7 +23,7 @@ public class Main extends Mod {
     }
 
     void addSettings() {
-        ui.settings.addCategory("Multiplayer Pause", s -> {
+        ui.settings.addCategory("Multiplayer Pause", Icon.pause, s -> {
             s.checkPref("multiplayerpause-toasts", true);
             s.checkPref("multiplayerpause-allowany", false);
             s.checkPref("multiplayerpause-synconpause", false);

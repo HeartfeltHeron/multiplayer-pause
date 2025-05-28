@@ -12,11 +12,10 @@ import mindustry.ui.*;
 import static arc.Core.*;
 import static mindustry.Vars.*;
 
-public class Main extends Mod {
+public class PauseMod extends Mod {
     private long lastSyncTime;
 
-    @Override
-    public void init() {
+    public PauseMod() {
         addSettings();
         setupEvents();
         setupPackets();

@@ -33,7 +33,7 @@ public class PauseMod extends Mod {
 
     void setupEvents() {
         Events.run(Trigger.update, () -> {
-            if (Core.input.keyTap(Binding.pause) && !renderer.isCutscene() && !scene.hasDialog() && !scene.hasKeyboard() && !ui.restart.isShown() && state.isGame() && net.active()) {
+            if (input.keyTap(Binding.pause) && !renderer.isCutscene() && !scene.hasDialog() && !scene.hasKeyboard() && !ui.restart.isShown() && state.isGame() && net.active()) {
                 if (net.client()) Call.serverPacketReliable("multiplayerpause-request", ""); // Send pause request
                 else showToast(player, !state.isPaused()); // Show toast for host pausing (inverted as the state hasn't been updated yet)
             }
